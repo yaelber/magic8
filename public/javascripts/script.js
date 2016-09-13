@@ -16,12 +16,11 @@ $("#form").submit(function(event){
         reject(alert("Please enter a question in the input box!"))
     }
   });
-});
-
-magic8Ball.then(function(questionText){
+  magic8Ball.then(function(questionText){
   var answerArray = ["You will live forever", "You're making the right decision","SO AWSOME!", "Nahhhh Dude"];
   var randomAnswer = answerArray[Math.floor(Math.random() * answerArray.length)];
   $("#answer").innerHTML = randomAnswer;
+});
 });
 
 
