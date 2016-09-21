@@ -17,7 +17,8 @@
 
 
 $(document).ready(function() {
-  $("#magic8").submit(function(event) {
+  $("#magic8").on("keypress",function(event) {
+    if (event.which == 13) {
     var questionText = $("input[name=question]").val();
     event.preventDefault();
     var magic8Ball = new Promise(function(resolve,reject) {
@@ -38,6 +39,7 @@ $(document).ready(function() {
     magic8Ball.catch(function(err){
       alert(err)
     })
+  }
   });
 });
 
